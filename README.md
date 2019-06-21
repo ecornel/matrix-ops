@@ -1,2 +1,2 @@
-# matrix-ops
-Some matrix operations in C++
+# MatrixTemplate
+Some matrix operations, using C++ templates
