@@ -1,5 +1,5 @@
 #include <iostream>
-#include "matrici.h"
+#include "inc/matrici.h"
 
 using namespace std;
 

@@ -1,12 +1,23 @@
+INCLUDES = -I "./inc"
+CXX = g++
+CXFLAGS = -g -Wall -std=c++11
+OBJS = main.o matrici.o
 
-output: main.o matrici.o
-	g++ main.cpp matrici.cpp -o output
+output: $(OBJS)
+	@echo Creating output file...!!!
+	$(CXX) $(CXXFLAGS) $(.cpp) -o $@ $(OBJS)
 
-main.o: main.cpp
-	g++ -c main.cpp
+.cpp.o:
+	@echo Compiling...!!!
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<
 
-matrici.o: matrici.cpp matrici.h
-	g++ -c matrici.cpp
+# sau detaliat mai jos:
+#main.o: main.cpp
+#	$(CXX) $(CXXFLAGS) $(INCLUDES) -c main.cpp
+
+#matrici.o: matrici.cpp inc/matrici.h
+#	$(CXX) $(CXXFLAGS) $(INCLUDES) -c matrici.cpp
 
 clean:
+	@echo Cleaning up...!!!
 	rm *.o output

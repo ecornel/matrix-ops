@@ -1,6 +1,6 @@
 //exemplu supraincarcare
 //Operatii cu matrici
-#include "matrici.h"
+#include "inc/matrici.h"
 #include <iostream>
 #include <time.h>
 #include <cstdlib>
